@@ -103,8 +103,3 @@ then find `MuseGadget-XXXXXX` in a Bluetooth scan and pair from the Muse app
 - **PR #55** — `HOMEHUB_LED_STRIP_GPIO` Kconfig option (int, default 27) so
   boards with the RGB LED elsewhere don't have to patch the source.
 
-## What's next
-
-Porting the gadget to the **ESP32-2432S028 "cheap yellow display"** (2.8" TFT +
-touch): display/touch drivers on the UI backend, same no-PSRAM memory discipline.
-That's the next board-support story.
