@@ -1,7 +1,7 @@
 # Muse Gadget on a generic ESP32-C6-N16
 
 Bringing Meta's [muse-gadget-sdk](https://github.com/facebookincubator/muse-gadget-sdk)
-to a generic AliExpress ESP32-C6 module (16 MB flash, **no PSRAM**) — from a dead
+to a generic AliExpress ESP32-C6 module (16 MB flash, **no PSRAM**), from a dead
 board to a paired device, with two upstream PRs along the way.
 
 ## TL;DR
