@@ -15,10 +15,10 @@ board to a paired device, with two upstream PRs along the way.
 
 ## Hardware
 
-![ESP32-C6-N16 devkit](images/esp32-c6-n16.jpg)
+<img src="images/esp32-c6-n16.jpg" width="500" alt="ESP32-C6-N16 devkit">
 *Generic ESP32-C6-N16 devkit: 16 MB flash, no PSRAM, native USB, RGB LED.*
 
-![RGB LED glowing blue — paired and connected](images/esp32-c6-led-blue.jpg)
+<img src="images/esp32-c6-led-blue.jpg" width="380" alt="RGB LED glowing blue — paired and connected">
 *The onboard RGB LED (GPIO8) showing solid blue: paired and connected.*
 
 ## The bring-up story
@@ -56,8 +56,7 @@ internal with small/dynamic buffers, tunnel off, trimmed Wi-Fi/lwIP/NimBLE
 pools. Result: clean boot, `boot: unpaired - advertising (always on while
 unpaired)`, pairing works.
 
-![MuseGadget-13CFC0 paired in the Muse app](images/app-devices-list.jpg)
-![Device details: last seen Now, firmware 999.0.0](images/app-device-detail.jpg)
+<img src="images/app-devices-list.jpg" width="270" alt="MuseGadget-13CFC0 paired in the Muse app"> <img src="images/app-device-detail.jpg" width="270" alt="Device details: last seen Now, firmware 999.0.0">
 
 ### 5. Board quirks found along the way
 - **Status LED**: the firmware hardcoded the WS2812 pin to GPIO27 (C5
