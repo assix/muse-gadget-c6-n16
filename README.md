@@ -118,7 +118,3 @@ then find `MuseGadget-XXXXXX` in a Bluetooth scan and pair from the Muse app
   devices-table rows.
 - **PR #55** — `HOMEHUB_LED_STRIP_GPIO` Kconfig option (int, default 27) so
   boards with the RGB LED elsewhere don't have to patch the source.
-<<<<<<< HEAD
-
-=======
->>>>>>> 794a581 (Add board photos and app screenshots)
