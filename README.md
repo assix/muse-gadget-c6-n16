@@ -13,6 +13,14 @@ board to a paired device, with two upstream PRs along the way.
 | Result | Boots, advertises BLE as `MuseGadget-XXXXXX`, pairs with the Muse Android app, joins Wi-Fi, OTA-ready |
 | Upstream | [PR #54](https://github.com/facebookincubator/muse-gadget-sdk/pull/54) (board support) · [PR #55](https://github.com/facebookincubator/muse-gadget-sdk/pull/55) (LED GPIO as Kconfig option) |
 
+## Hardware
+
+![ESP32-C6-N16 devkit](images/esp32-c6-n16.jpg)
+*Generic ESP32-C6-N16 devkit: 16 MB flash, no PSRAM, native USB, RGB LED.*
+
+![RGB LED glowing blue — paired and connected](images/esp32-c6-led-blue.jpg)
+*The onboard RGB LED (GPIO8) showing solid blue: paired and connected.*
+
 ## The bring-up story
 
 ### 1. Wrong chip, wrong target
@@ -48,6 +56,9 @@ internal with small/dynamic buffers, tunnel off, trimmed Wi-Fi/lwIP/NimBLE
 pools. Result: clean boot, `boot: unpaired - advertising (always on while
 unpaired)`, pairing works.
 
+![MuseGadget-13CFC0 paired in the Muse app](images/app-devices-list.jpg)
+![Device details: last seen Now, firmware 999.0.0](images/app-device-detail.jpg)
+
 ### 5. Board quirks found along the way
 - **Status LED**: the firmware hardcoded the WS2812 pin to GPIO27 (C5
   DevKitC-1). This board's RGB LED is on **GPIO8** — verified with the Arduino
@@ -66,6 +77,11 @@ unpaired)`, pairing works.
 ```
 muse-gadget-c6-n16/
 ├── README.md                              # this file
+├── images/                                # board photos and app screenshots
+│   ├── esp32-c6-n16.jpg
+│   ├── esp32-c6-led-blue.jpg
+│   ├── app-devices-list.jpg
+│   └── app-device-detail.jpg
 ├── devices/
 │   └── sdkconfig.muse-c6-nopsram          # board overlay (also upstreamed as PR #54)
 └── tools/
@@ -102,4 +118,7 @@ then find `MuseGadget-XXXXXX` in a Bluetooth scan and pair from the Muse app
   devices-table rows.
 - **PR #55** — `HOMEHUB_LED_STRIP_GPIO` Kconfig option (int, default 27) so
   boards with the RGB LED elsewhere don't have to patch the source.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 794a581 (Add board photos and app screenshots)
